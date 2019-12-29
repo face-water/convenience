@@ -1,0 +1,54 @@
+{
+  "name": "convenience",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --hot --open",
+    "dev": "concurrently 'npm start' 'npm run build'",
+    "build": "webpack --display-modules --display-chunks --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/face-water/convenience.git"
+  },
+  "author": "facewater",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/face-water/convenience/issues"
+  },
+  "homepage": "https://github.com/face-water/convenience#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-runtime": "^5.8.38",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.0.2",
+    "css-loader": "^3.3.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "url-loader": "^3.0.0",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^15.7.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.1"
+  }
+}
