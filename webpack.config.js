@@ -18,7 +18,8 @@ module.exports = {
     resolve: {
        
         alias: {
-            'vue$': 'vue/dist/vue.esm.js' ,
+            //'vue$': 'vue/dist/vue.esm.js' ,
+            vuex: 'vuex/dist/vuex.esm.js'
         },
         extensions: ['.js', '.vue']
     },
@@ -58,8 +59,8 @@ module.exports = {
             exclude: /node_modules/,
             use: "babel-loader"
         },
-        {
-            test: /\.vue$/,
+        { 
+            test: /\.vue$/, 
             use: 'vue-loader'
         }
       ],
