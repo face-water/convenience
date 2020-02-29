@@ -9,11 +9,29 @@ import { currency } from './currency'
 Vue.filter('currency', currency)
 Vue.use(VueRouter)
 const router = new VueRouter({
-	routers:[
-		{ path: '/', component:App },
-		{ path: '/signin', component:SignIn }
-	]
+	mode: 'history',
+	base: __dirname,
+	routes:[
+		
+		{ path: '/signin', component:SignIn },
+		{
+		  path: '/parent',
+		  name: 'parent',
+		  component: resolve => require(['./pages/parent'], resolve)
+		},
+		{
+		  path: '*', 
+		  redirect: '/parent'
+		},
+		{
+		  path: '/about',
+		  name: 'about',
+		  component: resolve => require(['./pages/about'], resolve)
+		}
+	  ]
 })
+store.$router = router
+/* eslint-disable */
 new Vue({
 	router,
 	store,

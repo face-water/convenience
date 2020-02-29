@@ -10,12 +10,18 @@
   </div>
 </template>
 
-<script>
+<script type="text/javascript">
+
 import ProductList from './ProductList.vue'
 import ShoppingCart from './ShoppingCart.vue'
 import NavBar from './NavBar.vue'
 
 export default {
+  data() {
+      return {
+        
+      }
+    },
   components: { ProductList, ShoppingCart, NavBar }
 }
 </script>
